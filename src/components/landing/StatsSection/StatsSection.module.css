@@ -98,3 +98,58 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .statsSection {
+    padding: 0 20px 48px;
+    gap: 32px;
+  }
+
+  .imageCol {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .statNumber {
+    font-size: 48px;
+  }
+
+  .statText {
+    font-size: 18px;
+  }
+
+  .statNumberWrapper {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .line {
+    width: 40px;
+  }
+
+  .card {
+    padding: 24px 20px;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .cardText {
+    font-size: 14.5px;
+    margin-bottom: 24px;
+  }
+
+  .cardCta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .statNumber {
+    font-size: 40px;
+  }
+  
+  .statText {
+    font-size: 16px;
+  }
+}
