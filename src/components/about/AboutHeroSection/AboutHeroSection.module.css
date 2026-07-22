@@ -1,0 +1,314 @@
+.aboutHero {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: var(--color-bg);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  line-height: 1.1;
+  color: #050201;
+  margin: 0;
+  max-width: 600px;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #8D6959;
+  margin: 0;
+  max-width: 450px;
+  margin-bottom: 12px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1193px;
+  height: 342px;
+  border-radius: 20px;
+  margin: 0 auto 32px auto;
+  overflow: hidden;
+}
+
+.imageWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000004D;
+  pointer-events: none;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+  display: block;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.playIconWrapper {
+  width: 58px;
+  height: 58px;
+  background-color: #E1937D;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.playIconWrapper:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.statsArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.statLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 269px;
+  height: 204px;
+  gap: 6px;
+}
+
+.bigNumberWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bigNumber {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  color: #050201;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+}
+
+.line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: #D3C5BA;
+}
+
+.statText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #050201;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.statCard {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 637px;
+  height: 204px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dotLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #050201;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #050201;
+  border-radius: 50%;
+}
+
+.progressData {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressData h3 {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: #050201;
+  margin: 0 0 32px 0;
+  line-height: 1;
+}
+
+.percent {
+  font-size: 24px;
+}
+
+.progressData p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #8D6959;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cardArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cardRight p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #8D6959;
+  margin: 0;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.learnMore {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 213px;
+  height: 103px;
+  gap: 8px;
+}
+
+.avatarsWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-bg);
+  margin-left: -12px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatarCount {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8D6959;
+  margin-left: 12px;
+}
+
+.learnMoreLink {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.learnMoreLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 60px;
+  }
+  .statsArea {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .topContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .heroImage {
+    height: 400px;
+  }
+  .statCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cardArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .heroImage {
+    height: 300px;
+  }
+}

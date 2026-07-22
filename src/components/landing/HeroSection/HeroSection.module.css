@@ -1,0 +1,109 @@
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 120px 80px;
+  gap: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 550px;
+}
+
+.title {
+  font-size: 84px;
+  line-height: 1.1;
+  color: var(--color-text-main);
+  margin-bottom: 64px;
+  letter-spacing: -0.02em;
+}
+
+.ctaWrapper {
+  margin-bottom: 64px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+.heroImageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-xl);
+}
+
+.badge {
+  position: absolute;
+  background-color: var(--color-white);
+  color: var(--color-text-main);
+  padding: 12px 24px;
+  border-radius: var(--border-radius-xl);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.badge1 {
+  bottom: 84px;
+  right: 24px;
+}
+
+.badge2 {
+  bottom: 24px;
+  right: 200px;
+}
+
+.badge3 {
+  bottom: 24px;
+  right: 24px;
+}
+
+@media (max-width: 1100px) {
+  .title {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 40px 32px;
+  }
+  
+  .heroContent {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .subtitle {
+    margin: 0 auto;
+  }
+  
+  .heroImageWrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,85 @@
+.testimonialSection {
+  width: 100%;
+  padding: 80px 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #F8F4F0;
+  border-radius: 32px;
+  padding: 100px 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.quoteText {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  line-height: 1.4;
+  color: var(--color-text-main);
+  margin: 0;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  position: absolute;
+  padding: 10px 32px;
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.badgeSupport {
+  background-color: #E29F8D;
+  transform: rotate(-15deg);
+  left: 10%;
+  bottom: 25%;
+}
+
+.badgeGrowth {
+  background-color: #8C6A5D;
+  transform: rotate(15deg);
+  right: 12%;
+  top: 25%;
+}
+
+@media (max-width: 992px) {
+  .testimonialSection {
+    padding: 60px 32px;
+  }
+  
+  .container {
+    padding: 60px 40px;
+  }
+  
+  .quoteText {
+    font-size: 28px;
+  }
+  
+  .badgeSupport {
+    left: -10px;
+    bottom: -10px;
+    transform: rotate(-10deg) scale(0.8);
+  }
+
+  .badgeGrowth {
+    right: -10px;
+    top: -10px;
+    transform: rotate(10deg) scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .quoteText {
+    font-size: 24px;
+  }
+}

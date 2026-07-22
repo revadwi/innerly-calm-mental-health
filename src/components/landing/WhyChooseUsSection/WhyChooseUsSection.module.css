@@ -1,0 +1,217 @@
+.whyChooseUsSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 80px 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.imageColumn {
+  flex: 5; /* slightly narrower than content column */
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pulseIcon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulseRing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.pulseCore {
+  width: 16px;
+  height: 16px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.floatingButtonContainer {
+  position: absolute;
+  bottom: -24px;
+  left: 24px;
+  z-index: 10;
+}
+
+.bookButton {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 8px 8px 24px !important;
+  border-radius: 100px !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: #909874 !important;
+  color: #FFFFFF !important;
+}
+
+.arrowIcon {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentColumn {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.tag {
+  font-family: 'Poppins', sans-serif;
+  background-color: #C1B4AA;
+  color: #1C1B19;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  line-height: 1.1;
+  color: #050201;
+  margin: 0;
+}
+
+.description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #8C786D;
+  margin: 0;
+  max-width: 95%;
+  margin-bottom: 24px;
+}
+
+.cardsRow {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  flex: 1;
+  padding: 32px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardDark {
+  background-color: #35382A;
+  color: #FFFFFF;
+}
+
+.cardLight {
+  background-color: #FFFFFF;
+  color: #050201;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLight {
+  background-color: #FFFFFF;
+}
+
+.iconDark {
+  background-color: #3B4132;
+}
+
+.card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cardDark p {
+  color: #A5A8A0;
+}
+
+.cardLight p {
+  color: #A08C7F;
+}
+
+.card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 48px;
+  }
+  
+  .cardsRow {
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    min-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 992px) {
+  .whyChooseUsSection {
+    flex-direction: column;
+    padding: 60px 32px;
+    gap: 40px;
+  }
+  
+  .imageColumn {
+    width: 100%;
+  }
+  
+  .imgContainer {
+    height: 400px;
+  }
+}

@@ -1,0 +1,123 @@
+.servicesListSection {
+  width: 100%;
+  padding-bottom: 120px;
+  background-color: var(--color-bg);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.listWrapper {
+  border-bottom: 1px solid #EADFD6;
+  width: 100%;
+}
+
+.serviceRow {
+  display: flex;
+  align-items: center;
+  padding: 36px 0;
+  gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.serviceRow:not(:last-child) {
+  border-bottom: 1px solid #EADFD6;
+}
+
+/* Icon Circle */
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(225, 147, 125, 0.08);
+  flex-shrink: 0;
+}
+
+/* Service Title styling */
+.serviceTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #0D0503;
+  width: 240px;
+  line-height: 1.35;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Service Description styling */
+.serviceDescription {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #8D6959;
+  line-height: 1.6;
+  flex: 1;
+  max-width: 620px;
+  margin: 0;
+  margin-left: 60px;
+}
+
+/* Action button Column styling */
+.actionColumn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.wellnessButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(148, 163, 118, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wellnessButton:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 6px 20px rgba(148, 163, 118, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .serviceRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px 0;
+  }
+  
+  .serviceTitle {
+    width: 100%;
+  }
+  
+  .serviceDescription {
+    max-width: 100%;
+  }
+  
+  .actionColumn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

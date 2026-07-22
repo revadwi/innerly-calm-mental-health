@@ -1,0 +1,458 @@
+.pageWrapper {
+  width: 100%;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 32px 0;
+}
+
+.badge {
+  background-color: #EADFD6;
+  color: #8D6959;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: 54px;
+  font-weight: 400;
+  color: #0D0503;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Booking Section */
+.bookingSection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px 32px 120px; /* reduced bottom padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bookingCard {
+  width: 100%;
+  max-width: 1020px; /* reduced from 1192px */
+  background-color: #F9F6F0;
+  border-radius: 24px;
+  padding: 28px 36px; /* reduced padding */
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.cardTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0D0503;
+  margin: 0 0 16px 0; /* reduced gap */
+}
+
+.divider {
+  width: 100%;
+  height: 1.5px;
+  background-color: #8D6959;
+  opacity: 0.35;
+  margin-bottom: 24px; /* reduced gap */
+}
+
+.bookingForm {
+  display: flex;
+  gap: 36px; /* reduced gap */
+}
+
+/* Form Column (Left) */
+.formColumn {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* reduced gap */
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px; /* reduced gap */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* reduced gap */
+}
+
+/* Form Labels */
+.label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #0D0503;
+}
+
+/* Form Inputs */
+.input {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0D0503;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 1.5px #8D6959;
+}
+
+.input::placeholder {
+  color: #8D6959;
+  opacity: 0.65;
+}
+
+/* WhatsApp Phone Input */
+.phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0 16px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.flagPrefix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.flagIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.prefixText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #0D0503;
+  font-weight: 400;
+}
+
+.phoneDivider {
+  width: 1px;
+  height: 24px;
+  background-color: #8D6959;
+  opacity: 0.4;
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
+.phoneInput {
+  flex: 1;
+  border: none;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0D0503;
+  outline: none;
+  padding: 0;
+}
+
+.phoneInput::placeholder {
+  color: #8D6959;
+  opacity: 0.65;
+}
+
+/* Slots Grid */
+.slotsArea {
+  margin-top: 12px;
+}
+
+.slotsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 8px;
+}
+
+.slotButton {
+  background-color: transparent;
+  border: 1px solid #8D6959;
+  border-radius: 30px;
+  padding: 9px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #8D6959;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slotButton:hover {
+  border-color: #8D6959;
+  color: #0D0503;
+}
+
+.slotButtonSelected {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(148, 163, 118, 0.2);
+}
+
+/* Calendar Column (Right) */
+.calendarColumn {
+  flex: 0.85;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.monthTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #0D0503;
+  margin: 0;
+}
+
+.navArrows {
+  display: flex;
+  gap: 8px;
+}
+
+.navArrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.navArrow:hover {
+  background-color: #EADFD6;
+}
+
+/* Calendar Grid */
+.weekdaysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.weekdaysGrid span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8D6959;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px 0;
+  text-align: center;
+}
+
+.dayButton {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #0D0503;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dayButton:hover:not(:disabled) {
+  background-color: #EADFD6;
+}
+
+.dayDisabled {
+  color: #C4B1A3;
+  opacity: 0.4;
+  cursor: default;
+}
+
+.daySelected {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 400;
+  box-shadow: 0 4px 10px rgba(148, 163, 118, 0.3);
+}
+
+/* Submit Reservation Button */
+.submitButton {
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(148, 163, 118, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary-hover);
+}
+
+/* Follow Section */
+.followSection {
+  width: 100%;
+  padding-bottom: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.followContainer {
+  padding: 0 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.followLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.followLine {
+  width: 80px;
+  height: 1.5px;
+  background-color: #8D6959;
+}
+
+.followText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #8D6959;
+  text-transform: capitalize;
+}
+
+.socialGrid {
+  display: flex;
+  gap: 12px;
+}
+
+.socialCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #8D6959;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.socialCircle:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+  .bookingSection,
+  .followContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .bookingForm {
+    flex-direction: column;
+    gap: 48px;
+  }
+  
+  .heading {
+    font-size: 38px;
+  }
+  
+  .bookingCard {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inputGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .slotsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

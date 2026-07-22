@@ -1,0 +1,147 @@
+.servicesHero {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  background-color: var(--color-bg);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.whiteCard {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 48px 60px 48px 60px;
+  box-shadow: 0 10px 40px rgba(13, 5, 3, 0.02);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+.badge {
+  background-color: #EADFD6;
+  color: #8D6959;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: #0D0503;
+  line-height: 1.25;
+  margin: 0 0 20px 0;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #8D6959;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.serviceCard {
+  flex: 1;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.serviceCard:nth-child(odd) {
+  margin-top: 40px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.serviceCard:hover .cardImage {
+  transform: scale(1.06);
+}
+
+.labelOverlay {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(141, 105, 89, 0.8);
+  color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.serviceCard:hover .labelOverlay {
+  background-color: rgba(46, 51, 38, 0.95); /* Dark olive zaitun */
+  transform: translateX(-50%) scale(1.02);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .whiteCard {
+    padding: 60px 32px;
+  }
+  
+  .cardsGrid {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .serviceCard {
+    flex: calc(50% - 8px);
+    height: 300px;
+  }
+  
+  .heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .serviceCard {
+    flex: 100%;
+  }
+}

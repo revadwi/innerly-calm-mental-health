@@ -1,0 +1,100 @@
+.statsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 120px 80px;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.imageCol {
+  flex: 1;
+  max-width: 320px;
+}
+
+.handsImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--border-radius-xl);
+}
+
+.statsCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.statNumberWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.statNumber {
+  font-size: 64px;
+  line-height: 1;
+  color: var(--color-text-main);
+}
+
+.line {
+  height: 2px;
+  width: 60px;
+  background-color: var(--color-text-muted);
+  opacity: 0.3;
+}
+
+.statText {
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.cardCol {
+  flex: 1.2;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: var(--border-radius-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.cardCta {
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .statsSection {
+    flex-direction: column;
+    padding: 0 32px 64px;
+  }
+  
+  .imageCol {
+    max-width: 100%;
+  }
+  
+  .statsCol {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .cardCol {
+    width: 100%;
+  }
+}
