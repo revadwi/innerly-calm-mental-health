@@ -122,26 +122,60 @@
 
 @media (max-width: 992px) {
   .whiteCard {
-    padding: 60px 32px;
+    padding: 40px 24px;
   }
   
   .cardsGrid {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
   }
   
   .serviceCard {
-    flex: calc(50% - 8px);
+    min-width: calc(50% - 10px);
+    flex: 1;
     height: 300px;
+    margin-top: 0 !important; /* Reset staggered layout on tablets/mobile */
   }
   
   .heading {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .servicesHero {
+    padding: 24px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .whiteCard {
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .cardsGrid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .serviceCard {
-    flex: 100%;
+    width: 100%;
+    height: 240px;
   }
 }
