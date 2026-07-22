@@ -5,7 +5,7 @@ import avatarSarah from '../../../assets/images/avatar_sarah.png';
 import avatar2 from '../../../assets/images/avatar_2.png';
 
 const Slice = ({ index, width, height, top }) => {
-  const echoes = [1, 2, 3, 4, 5];
+  const echoes = [1, 2, 3, 4, 5, 6];
   const gap = 10;
   const step = width + gap;
   
