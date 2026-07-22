@@ -222,8 +222,9 @@
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-    gap: 24px;
+    gap: 32px;
     align-items: center;
+    text-align: center;
   }
 
   .leftColumn {
@@ -235,31 +236,16 @@
     font-size: 38px;
     line-height: 1.2;
     text-align: center;
-    margin: 0 0 16px 0;
+    margin: 0 0 8px 0;
     width: 100%;
-  }
-
-  .rightColumn {
-    order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
-  }
-
-  .imageCard {
-    width: 100%;
-    max-width: 350px;
-    height: 380px;
-    border-radius: 24px;
   }
 
   .midRow {
-    order: 3;
+    order: 2;
     flex-direction: column;
     align-items: center;
     gap: 0;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     width: 100%;
   }
 
@@ -272,15 +258,30 @@
     font-size: 15px;
     line-height: 1.6;
     color: #9B867B;
-    max-width: 100%;
-    margin: 0;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .rightColumn {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .imageCard {
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+    border-radius: 24px;
   }
 
   .bottomRow {
     order: 4;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 28px;
     width: 100%;
   }
 
@@ -294,14 +295,14 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     margin-top: 0;
   }
 
   .therapyImg {
-    width: 110px;
-    height: 125px;
-    border-radius: 20px;
+    width: 120px;
+    height: 140px;
+    border-radius: 24px;
   }
 
   .statItem {
@@ -328,8 +329,8 @@
   }
 
   .therapyImg {
-    width: 95px;
-    height: 110px;
+    width: 100px;
+    height: 115px;
   }
 
   .statNumber {
