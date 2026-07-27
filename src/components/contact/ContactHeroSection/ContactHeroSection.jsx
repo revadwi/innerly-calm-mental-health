@@ -50,7 +50,7 @@ const ContactHeroSection = () => {
               <p className="font-medium text-[#1C1917] text-base font-sans">
                 Connect with our specialists to:
               </p>
-              <ul className="list-disc list-inside space-y-2.5 mt-4 text-[#78716C] font-sans text-base">
+              <ul className="list-disc list-outside pl-5 space-y-2.5 mt-4 text-[#78716C] font-sans text-base">
                 <li>Discover Personalized Care</li>
                 <li>Clarify Your Path</li>
                 <li>Empower Your Growth</li>
