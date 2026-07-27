@@ -54,23 +54,23 @@
 
 .title {
   font-family: var(--font-serif);
-  font-size: 48px;
+  font-size: 56px;
   color: var(--color-text-main);
   font-weight: 600;
   line-height: 1.2;
-  max-width: 672px;
+  max-width: 800px;
   margin-top: 8px;
 }
 
 @media (min-width: 768px) {
   .title {
-    font-size: 56px;
+    font-size: 72px;
   }
 }
 
 @media (min-width: 1024px) {
   .title {
-    font-size: 72px;
+    font-size: 84px;
   }
 }
 
