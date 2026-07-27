@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import styles from './Navbar.module.css';
+import Button from '../Button/Button';
 
 // 6-petal green geometric dots SVG logo (#8A9468)
 export const InnerlyLogoIcon = ({ className = "w-8 h-8" }) => (
@@ -29,6 +31,7 @@ export const InnerlyLogoIcon = ({ className = "w-8 h-8" }) => (
 
 const Navbar = () => {
   const location = useLocation();
+  const currentPath = location.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -72,7 +75,9 @@ const Navbar = () => {
       </ul>
 
       <div className={styles.cta}>
-        <Link to="/contact" className={styles.ctaButton}>Contact Us</Link>
+        <Link to="/contact">
+          <Button variant="primary">Contact Us</Button>
+        </Link>
       </div>
     </nav>
   );
