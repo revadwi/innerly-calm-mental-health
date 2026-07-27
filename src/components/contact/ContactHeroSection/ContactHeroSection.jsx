@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Navbar from '../../common/Navbar/Navbar';
+import styles from './ContactHeroSection.module.css';
 
 export const ContactNavbar = Navbar;
 
@@ -26,31 +27,31 @@ const ContactHeroSection = () => {
   };
 
   return (
-    <section className="bg-[#FDFCF8] min-h-screen text-[#1C1917] font-sans pb-16">
+    <section className={styles.heroSection}>
       {/* Dynamic Navbar Component */}
       <Navbar />
 
       {/* Global Constrained Wrapper */}
-      <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 py-10 lg:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div className={styles.container}>
+        <div className={styles.contentWrapper}>
           
           {/* Left Column (Copywriting & Specialist Checklist) */}
-          <div className="flex flex-col justify-between h-full pt-2">
+          <div className={styles.leftColumn}>
             <div>
-              <h1 className="font-serif text-4xl lg:text-5xl leading-tight text-[#1C1917]">
+              <h1 className={styles.title}>
                 Let's Take the First Step Together
               </h1>
               
-              <p className="text-[#78716C] text-base lg:text-lg mt-6 leading-relaxed">
+              <p className={styles.description}>
                 Whether you're seeking guidance, have questions about our mindfulness programs, or simply need someone to talk to, our team is here to help you find your path to inner peace.
               </p>
             </div>
 
-            <div className="mt-10 lg:mt-20">
-              <p className="font-medium text-[#1C1917] text-base font-sans">
+            <div className={styles.specialistChecklist}>
+              <p className={styles.checklistTitle}>
                 Connect with our specialists to:
               </p>
-              <ul className="list-disc list-outside pl-5 space-y-2.5 mt-4 text-[#78716C] font-sans text-base">
+              <ul className={styles.checklist}>
                 <li>Discover Personalized Care</li>
                 <li>Clarify Your Path</li>
                 <li>Empower Your Growth</li>
@@ -60,13 +61,13 @@ const ContactHeroSection = () => {
           </div>
 
           {/* Right Column (Contact Form Container) */}
-          <div className="bg-[#F4EFE5] rounded-3xl p-8 lg:p-10">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5 font-sans">
+          <div className={styles.rightColumn}>
+            <form onSubmit={handleSubmit} className={styles.form}>
               
               {/* Row 1: Grid 2 cols (First Name*, Last Name*) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="text-[#1C1917] font-medium text-sm mb-2 block">
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <label htmlFor="firstName" className={styles.label}>
                     First Name*
                   </label>
                   <input
@@ -77,11 +78,11 @@ const ContactHeroSection = () => {
                     onChange={handleChange}
                     placeholder="First name"
                     required
-                    className="w-full bg-white rounded-2xl px-4 py-3.5 text-sm text-[#2D2825] placeholder-[#A3887E] appearance-none border-0 outline-none focus:ring-2 focus:ring-[#8C9B6A]/40 transition-all"
+                    className={styles.input}
                   />
                 </div>
-                <div>
-                  <label htmlFor="lastName" className="text-[#1C1917] font-medium text-sm mb-2 block">
+                <div className={styles.formGroup}>
+                  <label htmlFor="lastName" className={styles.label}>
                     Last Name*
                   </label>
                   <input
@@ -92,24 +93,24 @@ const ContactHeroSection = () => {
                     onChange={handleChange}
                     placeholder="Last name"
                     required
-                    className="w-full bg-white rounded-2xl px-4 py-3.5 text-sm text-[#2D2825] placeholder-[#A3887E] appearance-none border-0 outline-none focus:ring-2 focus:ring-[#8C9B6A]/40 transition-all"
+                    className={styles.input}
                   />
                 </div>
               </div>
 
               {/* Row 2: WhatsApp / Phone Number* */}
-              <div>
-                <label htmlFor="phone" className="text-[#1C1917] font-medium text-sm mb-2 block">
+              <div className={styles.formGroup}>
+                <label htmlFor="phone" className={styles.label}>
                   WhatsApp / Phone Number*
                 </label>
-                <div className="w-full bg-white rounded-2xl px-4 py-3.5 flex items-center gap-2.5 focus-within:ring-2 focus-within:ring-[#8C9B6A]/40 transition-all">
+                <div className={styles.phoneInputWrapper}>
                   <img 
                     src="https://flagcdn.com/w40/au.png" 
                     alt="Australia" 
-                    className="w-6 h-6 rounded-full object-cover shrink-0" 
+                    className={styles.flag} 
                   />
-                  <span className="text-[#2D2825] font-medium text-sm shrink-0">+61</span>
-                  <div className="h-5 w-[1px] bg-[#E5DED8] mx-2 shrink-0"></div>
+                  <span className={styles.countryCode}>+61</span>
+                  <div className={styles.divider}></div>
                   <input
                     type="tel"
                     id="phone"
@@ -118,14 +119,14 @@ const ContactHeroSection = () => {
                     onChange={handleChange}
                     placeholder="Phone number"
                     required
-                    className="w-full bg-transparent border-0 outline-none text-[#2D2825] placeholder-[#A3887E] text-sm appearance-none p-0 focus:ring-0"
+                    className={styles.phoneInput}
                   />
                 </div>
               </div>
 
               {/* Row 3: Email Address* */}
-              <div>
-                <label htmlFor="email" className="text-[#1C1917] font-medium text-sm mb-2 block">
+              <div className={styles.formGroup}>
+                <label htmlFor="email" className={styles.label}>
                   Email Address*
                 </label>
                 <input
@@ -136,65 +137,63 @@ const ContactHeroSection = () => {
                   onChange={handleChange}
                   placeholder="Personal email"
                   required
-                  className="w-full bg-white rounded-2xl px-4 py-3.5 text-sm text-[#2D2825] placeholder-[#A3887E] appearance-none border-0 outline-none focus:ring-2 focus:ring-[#8C9B6A]/40 transition-all"
+                  className={styles.input}
                 />
               </div>
 
               {/* Row 4: Grid 2 cols (Primary Wellness*, Session Preference*) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="primaryWellness" className="text-[#1C1917] font-medium text-sm mb-2 block">
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <label htmlFor="primaryWellness" className={styles.label}>
                     Primary Wellness*
                   </label>
-                  <div className="relative">
+                  <div className={styles.selectWrapper}>
                     <select
                       id="primaryWellness"
                       name="primaryWellness"
                       value={formData.primaryWellness}
                       onChange={handleChange}
                       required
-                      className={`w-full bg-white rounded-2xl px-4 py-3.5 text-sm appearance-none border-0 outline-none focus:ring-2 focus:ring-[#8C9B6A]/40 transition-all cursor-pointer pr-10 ${
-                        formData.primaryWellness ? 'text-[#2D2825]' : 'text-[#A3887E]'
-                      }`}
+                      className={styles.select}
+                      style={{ color: formData.primaryWellness ? '#2D2825' : '#A3887E' }}
                     >
-                      <option value="" disabled className="text-[#A3887E]">Current Focus</option>
-                      <option value="anxiety" className="text-[#2D2825]">Anxiety & Stress Management</option>
-                      <option value="mindfulness" className="text-[#2D2825]">Mindfulness & Meditation</option>
-                      <option value="therapy" className="text-[#2D2825]">Individual Therapy</option>
-                      <option value="coaching" className="text-[#2D2825]">Life Coaching</option>
+                      <option value="" disabled style={{ color: '#A3887E' }}>Current Focus</option>
+                      <option value="anxiety" style={{ color: '#2D2825' }}>Anxiety & Stress Management</option>
+                      <option value="mindfulness" style={{ color: '#2D2825' }}>Mindfulness & Meditation</option>
+                      <option value="therapy" style={{ color: '#2D2825' }}>Individual Therapy</option>
+                      <option value="coaching" style={{ color: '#2D2825' }}>Life Coaching</option>
                     </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#A3887E] w-4 h-4 pointer-events-none" />
+                    <ChevronDown className={styles.selectIcon} />
                   </div>
                 </div>
 
-                <div>
-                  <label htmlFor="sessionPreference" className="text-[#1C1917] font-medium text-sm mb-2 block">
+                <div className={styles.formGroup}>
+                  <label htmlFor="sessionPreference" className={styles.label}>
                     Session Preference*
                   </label>
-                  <div className="relative">
+                  <div className={styles.selectWrapper}>
                     <select
                       id="sessionPreference"
                       name="sessionPreference"
                       value={formData.sessionPreference}
                       onChange={handleChange}
                       required
-                      className={`w-full bg-white rounded-2xl px-4 py-3.5 text-sm appearance-none border-0 outline-none focus:ring-2 focus:ring-[#8C9B6A]/40 transition-all cursor-pointer pr-10 ${
-                        formData.sessionPreference ? 'text-[#2D2825]' : 'text-[#A3887E]'
-                      }`}
+                      className={styles.select}
+                      style={{ color: formData.sessionPreference ? '#2D2825' : '#A3887E' }}
                     >
-                      <option value="" disabled className="text-[#A3887E]">Preferred Session Type</option>
-                      <option value="online" className="text-[#2D2825]">Online / Virtual Session</option>
-                      <option value="in-person" className="text-[#2D2825]">In-Person at Clinic</option>
-                      <option value="hybrid" className="text-[#2D2825]">Hybrid</option>
+                      <option value="" disabled style={{ color: '#A3887E' }}>Preferred Session Type</option>
+                      <option value="online" style={{ color: '#2D2825' }}>Online / Virtual Session</option>
+                      <option value="in-person" style={{ color: '#2D2825' }}>In-Person at Clinic</option>
+                      <option value="hybrid" style={{ color: '#2D2825' }}>Hybrid</option>
                     </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#A3887E] w-4 h-4 pointer-events-none" />
+                    <ChevronDown className={styles.selectIcon} />
                   </div>
                 </div>
               </div>
 
               {/* Row 5: Textarea */}
-              <div>
-                <label htmlFor="message" className="text-[#1C1917] font-medium text-sm mb-2 block">
+              <div className={styles.formGroup}>
+                <label htmlFor="message" className={styles.label}>
                   How can we support your journey?
                 </label>
                 <textarea
@@ -203,14 +202,14 @@ const ContactHeroSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us more about your problem"
-                  className="w-full bg-white rounded-2xl p-4 text-sm text-[#2D2825] placeholder-[#A3887E] h-36 resize-none border-0 outline-none appearance-none focus:ring-2 focus:ring-[#8C9B6A]/40 transition-all"
+                  className={styles.textarea}
                 />
               </div>
 
               {/* Submit Button (Pill Rounded Full Width) */}
               <button
                 type="submit"
-                className="w-full bg-[#8C9B6A] hover:bg-[#7a885b] text-white font-medium text-base text-center rounded-full py-3.5 px-6 mt-6 transition-colors shadow-sm cursor-pointer active:scale-[0.99]"
+                className={styles.submitButton}
               >
                 Book Your Free Consultation
               </button>
