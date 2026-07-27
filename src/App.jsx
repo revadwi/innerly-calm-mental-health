@@ -6,6 +6,9 @@ import ServicesPage from './pages/ServicesPage/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage/ServiceDetailPage';
 import BookAppointmentPage from './pages/BookAppointmentPage/BookAppointmentPage';
 import TestimonialsPage from './pages/TestimonialsPage/TestimonialsPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import './index.css';
 
 function App() {
@@ -19,6 +22,11 @@ function App() {
           <Route path="/services/detail" element={<ServiceDetailPage />} />
           <Route path="/book" element={<BookAppointmentPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>

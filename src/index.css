@@ -1,48 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
 :root {
-  --color-bg: #FCFAF6;
-  --color-text-main: #1C1B19;
-  --color-text-muted: #7E7C78;
-  --color-primary: #94A376;
-  --color-primary-hover: #839166;
-  --color-white: #FFFFFF;
-
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
-
-  --border-radius-sm: 8px;
-  --border-radius-md: 16px;
-  --border-radius-lg: 24px;
-  --border-radius-xl: 32px;
+  --color-bg: #FDFCF8;
+  --color-text-main: #1C1917;
+  --color-text-muted: #78716C;
+  --color-primary: #8C9B6A;
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  width: 100%;
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text-main);
+  background-color: #FDFCF8;
+  color: #1C1917;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: inherit;
 }
