@@ -11,11 +11,13 @@ import BlogDetailPage from './pages/BlogDetailPage/BlogDetailPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import ScrollToTop from './components/common/ScrollToTop/ScrollToTop';
 import './index.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Routes>
           <Route path="/" element={<LandingPage />} />
