@@ -1,11 +1,49 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import styles from './Navbar.module.css';
-import Button from '../Button/Button';
+import React, { useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+// 6-petal green geometric dots SVG logo (#8A9468)
+export const InnerlyLogoIcon = ({ className = "w-8 h-8" }) => (
+  <svg 
+    viewBox="0 0 40 40" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+    className={`shrink-0 ${className}`}
+  >
+    <circle cx="20" cy="20" r="2.5" fill="#8A9468" />
+    <circle cx="31" cy="20" r="3.2" fill="#8A9468" />
+    <circle cx="25.5" cy="10.47" r="3.2" fill="#8A9468" />
+    <circle cx="14.5" cy="10.47" r="3.2" fill="#8A9468" />
+    <circle cx="9" cy="20" r="3.2" fill="#8A9468" />
+    <circle cx="14.5" cy="29.53" r="3.2" fill="#8A9468" />
+    <circle cx="25.5" cy="29.53" r="3.2" fill="#8A9468" />
+    <path 
+      d="M20 17.5C21.8 17.5 23.6 14.8 25.5 10.47M20 17.5C18.2 17.5 16.4 14.8 14.5 10.47M20 22.5C21.8 22.5 23.6 25.2 25.5 29.53M20 22.5C18.2 22.5 16.4 25.2 14.5 29.53M17.5 20C17.5 18.2 14.8 16.4 9 20M22.5 20C22.5 18.2 25.2 16.4 31 20" 
+      stroke="#8A9468" 
+      strokeWidth="1.2" 
+      strokeLinecap="round" 
+      opacity="0.35"
+    />
+  </svg>
+);
 
 const Navbar = () => {
   const location = useLocation();
-  const currentPath = location.pathname;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Book', path: '/book' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  const isLinkActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -30,11 +68,11 @@ const Navbar = () => {
         <li className={currentPath === '/book' ? styles.active : ''}><Link to="/book">Book</Link></li>
         <li className={currentPath === '/testimonials' ? styles.active : ''}><Link to="/testimonials">Testimonials</Link></li>
         <li className={currentPath === '/blog' ? styles.active : ''}><Link to="/blog">Blog</Link></li>
-        <li><a href="#">Contact</a></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
 
       <div className={styles.cta}>
-        <Button variant="primary">Contact Us</Button>
+        <Link to="/contact" className={styles.ctaButton}>Contact Us</Link>
       </div>
     </nav>
   );

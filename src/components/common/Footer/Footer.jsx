@@ -47,9 +47,8 @@ const Footer = () => {
                 <h4>Company</h4>
                 <ul>
                   <li><Link to="/about">About</Link></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Book</a></li>
+                  <li><Link to="/services">Services</Link></li>
+                  <li><Link to="/book">Book</Link></li>
                 </ul>
               </div>
               <div className={styles.linkColumn}>

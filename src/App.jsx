@@ -8,6 +8,9 @@ import BookAppointmentPage from './pages/BookAppointmentPage/BookAppointmentPage
 import TestimonialsPage from './pages/TestimonialsPage/TestimonialsPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage/BlogDetailPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import './index.css';
 
 function App() {
@@ -23,6 +26,11 @@ function App() {
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/detail" element={<BlogDetailPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>
