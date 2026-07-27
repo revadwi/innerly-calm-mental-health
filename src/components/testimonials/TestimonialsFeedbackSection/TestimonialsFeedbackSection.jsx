@@ -5,22 +5,19 @@ import avatarSarah from '../../../assets/images/avatar_sarah.png';
 import avatar2 from '../../../assets/images/avatar_2.png';
 import avatar3 from '../../../assets/images/avatar_3.png';
 
-const Slice = ({ index, width, heightPercent, topPercent, containerWidth = 450, containerHeight = 340 }) => {
+const Slice = ({ index, width, height, top }) => {
   const echoes = [1, 2, 3, 4, 5, 6];
-  const gap = 20;
+  const gap = 10;
   const step = width + gap;
-  const leftPx = index * step;
-  const topPx = (containerHeight * topPercent) / 100;
-  const heightPx = (containerHeight * heightPercent) / 100;
   
   return (
     <div 
       className={styles.sliceWrapper} 
       style={{ 
         width: `${width}px`, 
-        height: `${heightPx}px`, 
-        top: `${topPx}px`,
-        left: `${leftPx}px`
+        height: `${height}%`, 
+        top: `${top}%`,
+        left: `${index * step}px`
       }}
     >
       {/* Echoes */}
@@ -29,7 +26,7 @@ const Slice = ({ index, width, heightPercent, topPercent, containerWidth = 450, 
           key={i} 
           className={styles.sliceEcho}
           style={{
-            transform: `translate(${i * 3.5}px, -${i * 3.5}px)`,
+            transform: `translate(${i * 6}px, -${i * 6}px)`,
             zIndex: 10 - i
           }}
         />
@@ -40,8 +37,8 @@ const Slice = ({ index, width, heightPercent, topPercent, containerWidth = 450, 
         className={styles.sliceImage}
         style={{
           backgroundImage: `url(${singingBowlImg})`,
-          backgroundPosition: `-${leftPx}px -${topPx}px`,
-          backgroundSize: `${containerWidth}px ${containerHeight}px`
+          backgroundPosition: `calc(-${index * step}px - 50px) -${top * 4}px`,
+          backgroundSize: '500px 400px'
         }}
       />
     </div>
@@ -106,96 +103,82 @@ const TestimonialsFeedbackSection = () => {
 
   return (
     <section className={styles.feedbackSection}>
-      <div className={styles.container}>
-        {/* Header */}
-        <div className={styles.header}>
-          <div className={styles.headerLeft}>
-            <span className={styles.tag}>Heartfelt Feedback</span>
-            <h2 className={styles.title}>
-              Voices of Healing<br />
-              and Growth
-            </h2>
-          </div>
+      <div className={styles.header}>
+        <div className={styles.headerLeft}>
+          <span className={styles.tag}>Heartfelt Feedback</span>
+          <h2 className={styles.title}>
+            Voices of Healing<br />and Growth
+          </h2>
+        </div>
+        <div className={styles.headerRight}>
+          <button className={styles.navButtonPrev} onClick={prevSlide} aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#929971" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <button className={styles.navButtonNext} onClick={nextSlide} aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-          <div className={styles.headerRight}>
-            <button 
-              onClick={prevSlide} 
-              className={styles.navButtonPrev}
-              aria-label="Previous testimonial"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#050201" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <button 
-              onClick={nextSlide} 
-              className={styles.navButtonNext}
-              aria-label="Next testimonial"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-          </div>
+      <div className={styles.content}>
+        {/* Left Graphic */}
+        <div className={styles.graphicContainer}>
+          <Slice index={0} width={58} height={45} top={25} />
+          <Slice index={1} width={58} height={80} top={10} />
+          <Slice index={2} width={58} height={35} top={40} />
+          <Slice index={3} width={58} height={45} top={20} />
+          <Slice index={4} width={58} height={45} top={40} />
+          <Slice index={5} width={58} height={75} top={15} />
         </div>
 
-        {/* Content Row: Graphic + Slider */}
-        <div className={styles.content}>
-          {/* Left Graphic: Singing Bowl Slices */}
-          <div className={styles.graphicContainer}>
-            <Slice index={0} width={46} heightPercent={58} topPercent={14} containerWidth={450} containerHeight={340} />
-            <Slice index={1} width={46} heightPercent={86} topPercent={8} containerWidth={450} containerHeight={340} />
-            <Slice index={2} width={46} heightPercent={48} topPercent={22} containerWidth={450} containerHeight={340} />
-            <Slice index={3} width={46} heightPercent={58} topPercent={10} containerWidth={450} containerHeight={340} />
-            <Slice index={4} width={46} heightPercent={58} topPercent={30} containerWidth={450} containerHeight={340} />
-            <Slice index={5} width={46} heightPercent={84} topPercent={10} containerWidth={450} containerHeight={340} />
-          </div>
-
-          {/* Right Cards Slider */}
-          <div className={styles.sliderWindow}>
-            <div 
-              className={styles.sliderTrack}
-              style={{ transform: `translateX(-${currentIndex * 520}px)` }}
-            >
-              {testimonials.map((item) => (
-                <div key={item.id} className={styles.card}>
-                  <p className={styles.quoteText}>{item.quote}</p>
-                  
-                  <div className={styles.cardFooter}>
-                    <div className={styles.userInfo}>
-                      <div className={styles.avatarWrapper}>
-                        <img src={item.avatar} alt={item.name} className={styles.avatar} />
-                      </div>
-                      <div className={styles.userDetails}>
-                        <h4 className={styles.userName}>{item.name}</h4>
-                        <span className={styles.userRole}>{item.role}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Big Quote Mark */}
-                    <div className={styles.quoteIcon}>
-                      <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 24V14.4C0 10.1333 1.16667 6.46667 3.5 3.4C5.83333 0.333333 9.03333 -0.8 13.1 0L10.7 5.4C8.76667 5.86667 7.23333 6.76667 6.1 8.1C4.96667 9.43333 4.4 11 4.4 12.8H11.2V24H0ZM16.8 24V14.4C16.8 10.1333 17.9667 6.46667 20.3 3.4C22.6333 0.333333 25.8333 -0.8 29.9 0L27.5 5.4C25.5667 5.86667 24.0333 6.76667 22.9 8.1C21.7667 9.43333 21.2 11 21.2 12.8H28V24H16.8Z" fill="#050201"/>
-                      </svg>
-                    </div>
+        {/* Right Carousel */}
+        <div className={styles.carouselContainer}>
+          <div 
+            className={styles.carouselTrack}
+            style={{ transform: `translateX(-${currentIndex * 472}px)` }} // 440px width + 32px gap
+          >
+            {testimonials.map((item) => (
+              <div 
+                key={item.id} 
+                className={styles.testimonialCard}
+              >
+                <p className={styles.quote}>
+                  {item.quote}
+                </p>
+                
+                <div className={styles.authorArea}>
+                  <img src={item.avatar} alt={item.name} className={styles.avatar} />
+                  <div className={styles.authorInfo}>
+                    <h4>{item.name}</h4>
+                    <p>{item.role}</p>
+                  </div>
+                  <div className={styles.quoteIcon}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 10C9 8.34315 10.3431 7 12 7H13V9H12C11.4477 9 11 9.44772 11 10V11H13V17H7V11H9V10ZM18 10C18 8.34315 19.3431 7 21 7H22V9H21C20.4477 9 20 9.44772 20 10V11H22V17H16V11H18V10Z" fill="#1C1B19"/>
+                    </svg>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
 
-        {/* Pagination Dots */}
-        <div className={styles.paginationDots}>
-          {testimonials.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`${styles.dot} ${currentIndex === idx ? styles.activeDot : ''}`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-        </div>
+      {/* Pagination Dots */}
+      <div className={styles.pagination}>
+        {testimonials.map((_, index) => (
+          <span 
+            key={index} 
+            className={`${styles.dot} ${index === currentIndex ? styles.dotActive : ''}`}
+            onClick={() => setCurrentIndex(index)}
+          ></span>
+        ))}
       </div>
     </section>
   );

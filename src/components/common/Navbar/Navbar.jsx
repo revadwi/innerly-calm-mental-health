@@ -28,7 +28,8 @@ const Navbar = () => {
         <li className={currentPath === '/about' ? styles.active : ''}><Link to="/about">About</Link></li>
         <li className={currentPath.startsWith('/services') ? styles.active : ''}><Link to="/services">Services</Link></li>
         <li className={currentPath === '/book' ? styles.active : ''}><Link to="/book">Book</Link></li>
-        <li><a href="#">Blog</a></li>
+        <li className={currentPath === '/testimonials' ? styles.active : ''}><Link to="/testimonials">Testimonials</Link></li>
+        <li className={currentPath === '/blog' ? styles.active : ''}><Link to="/blog">Blog</Link></li>
         <li><a href="#">Contact</a></li>
       </ul>
 

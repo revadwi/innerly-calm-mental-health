@@ -44,24 +44,70 @@
 .sticker {
   position: absolute;
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-white);
-  padding: 12px 32px;
+  padding: 8px 24px;
   border-radius: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .stickerSupport {
   background-color: #E1937D;
-  bottom: 125px;
-  left: 75px;
-  transform: rotate(-25deg);
+  bottom: 165px;
+  left: 80px;
+  transform: rotate(25deg);
 }
 
 .stickerGrowth {
   background-color: #8D6959;
-  top: 75px;
-  right: 65px;
+  top: 85px;
+  right: 40px;
   transform: rotate(20deg);
+}
+
+@media (max-width: 992px) {
+  .quoteCard {
+    padding: 60px 40px;
+    height: auto;
+    width: 100%;
+  }
+  .quoteText {
+    height: auto;
+    width: 100%;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .quoteSection {
+    padding-bottom: 64px;
+  }
+  .quoteCard {
+    padding: 48px 20px;
+  }
+  .quoteText {
+    font-size: 20px;
+  }
+  .sticker {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+  .stickerSupport {
+    bottom: 24px;
+    left: 20px;
+  }
+  .stickerGrowth {
+    top: 24px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quoteText {
+    font-size: 18px;
+  }
 }

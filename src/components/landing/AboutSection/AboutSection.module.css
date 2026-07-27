@@ -5,7 +5,7 @@
   padding: 80px 120px;
   max-width: 1440px;
   margin: 0 auto;
-  gap: 60px;
+  gap: 48px;
 }
 
 .content {
@@ -18,17 +18,20 @@
 
 .tag {
   background-color: #D3C1B6;
-  color: #1C1B19;
-  padding: 8px 16px;
+  color: #0D0503;
+  padding: 8px 20px;
   border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
 
 .title {
   font-size: 56px;
-  line-height: 1.1;
-  color: var(--color-text-main);
+  line-height: 1.2;
+  color: #0D0503;
+  font-family: var(--font-serif);
+  font-weight: 400;
   margin: 0;
 }
 
@@ -36,76 +39,79 @@
   font-size: 18px;
   line-height: 1.6;
   color: #9A8A7F;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   margin: 0;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .imageGrid {
+  --s: 1;
   flex: 1;
   position: relative;
-  height: 600px;
+  height: calc(600px * var(--s));
   width: 100%;
 }
 
 .imgLeft, .imgCenter, .imgRight {
   position: absolute;
-  border-radius: 16px;
+  border-radius: calc(16px * var(--s));
   object-fit: cover;
 }
 
 .imgLeft {
-  width: 240px;
-  height: 400px;
+  width: calc(240px * var(--s));
+  height: calc(400px * var(--s));
   left: 0;
-  top: 100px;
+  top: calc(100px * var(--s));
   z-index: 1;
 }
 
 .imgRight {
-  width: 240px;
-  height: 400px;
+  width: calc(240px * var(--s));
+  height: calc(400px * var(--s));
   right: 0;
-  top: 100px;
+  top: calc(100px * var(--s));
   z-index: 1;
 }
 
 .imgCenter {
-  width: 260px;
-  height: 520px;
+  width: calc(260px * var(--s));
+  height: calc(440px * var(--s));
   left: 50%;
   transform: translateX(-50%);
-  top: 40px;
+  top: calc(80px * var(--s));
   z-index: 2;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 calc(20px * var(--s)) calc(40px * var(--s)) rgba(0,0,0,0.1);
 }
 
 .moodCard, .sleepCard {
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 24px;
-  border-radius: 12px;
+  gap: calc(16px * var(--s));
+  padding: calc(16px * var(--s)) calc(24px * var(--s));
+  border-radius: calc(12px * var(--s));
   z-index: 3;
 }
 
 .moodCard {
   background-color: #836557;
   color: #FFFFFF;
-  top: 10px;
-  right: 20px;
-  box-shadow: 0 10px 30px rgba(131, 101, 87, 0.3);
+  top: calc(50px * var(--s));
+  right: calc(20px * var(--s));
+  box-shadow: 0 calc(10px * var(--s)) calc(30px * var(--s)) rgba(131, 101, 87, 0.3);
 }
 
 .moodText h4 {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: calc(16px * var(--s));
   font-weight: 500;
-  margin: 0 0 4px 0;
+  margin: 0 0 calc(4px * var(--s)) 0;
 }
 
 .moodText p {
-  font-size: 12px;
+  font-size: calc(12px * var(--s));
   color: #D3C1B6;
   margin: 0;
 }
@@ -113,20 +119,20 @@
 .sleepCard {
   background-color: #FFFFFF;
   color: var(--color-text-main);
-  bottom: 20px;
-  left: 40px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  bottom: calc(40px * var(--s));
+  left: calc(20px * var(--s));
+  box-shadow: 0 calc(10px * var(--s)) calc(40px * var(--s)) rgba(0,0,0,0.08);
 }
 
 .sleepText h4 {
   font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 4px 0;
+  font-size: calc(16px * var(--s));
+  font-weight: 500;
+  margin: 0 0 calc(4px * var(--s)) 0;
 }
 
 .sleepText p {
-  font-size: 12px;
+  font-size: calc(12px * var(--s));
   color: #9A8A7F;
   margin: 0;
 }
@@ -135,6 +141,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.arrowIcon svg {
+  width: calc(16px * var(--s));
+  height: calc(16px * var(--s));
+}
+
+.moodIcon svg, .sleepIcon svg {
+  width: calc(24px * var(--s));
+  height: calc(24px * var(--s));
 }
 
 @media (max-width: 992px) {
@@ -153,8 +169,9 @@
   }
   
   .imageGrid {
-    height: 500px;
-    transform: scale(0.8);
+    --s: 0.8;
+    margin-top: 24px;
+    flex: none;
   }
 }
 
@@ -182,10 +199,32 @@
   }
 
   .imageGrid {
-    height: 400px;
-    transform: scale(0.68);
-    transform-origin: center center;
-    margin: -30px auto;
+    --s: 1;
+    height: 480px;
+    margin-top: 32px;
+    flex: none;
+  }
+
+  .imgLeft, .imgRight {
+    display: none;
+  }
+
+  .imgCenter {
+    width: 100%;
+    max-width: 340px;
+    height: 420px;
+    top: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .moodCard {
+    top: 0;
+    right: 5%;
+  }
+
+  .sleepCard {
+    bottom: 0;
+    left: 5%;
   }
 }
 
@@ -195,8 +234,40 @@
   }
 
   .imageGrid {
-    height: 350px;
-    transform: scale(0.55);
-    margin: -60px auto;
+    height: 400px;
+  }
+
+  .imgCenter {
+    max-width: 280px;
+    height: 340px;
+    top: 30px;
+  }
+
+  .moodCard {
+    right: 0;
+    top: -10px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .sleepCard {
+    left: 0;
+    bottom: -10px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .moodIcon svg, .sleepIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .moodText h4, .sleepText h4 {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .moodText p, .sleepText p {
+    font-size: 11px;
   }
 }

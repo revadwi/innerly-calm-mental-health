@@ -3,9 +3,9 @@ import Navbar from '../../components/common/Navbar/Navbar';
 import HeroSection from '../../components/landing/HeroSection/HeroSection';
 import StatsSection from '../../components/landing/StatsSection/StatsSection';
 import AboutSection from '../../components/landing/AboutSection/AboutSection';
-import TestimonialSection from '../../components/landing/TestimonialSection/TestimonialSection';
+import AboutQuoteSection from '../../components/about/AboutQuoteSection/AboutQuoteSection';
 import ServicesSection from '../../components/landing/ServicesSection/ServicesSection';
-import WhyChooseUsSection from '../../components/landing/WhyChooseUsSection/WhyChooseUsSection';
+import AboutChooseUsSection from '../../components/about/AboutChooseUsSection/AboutChooseUsSection';
 import FeedbackSection from '../../components/landing/FeedbackSection/FeedbackSection';
 import PricingSection from '../../components/landing/PricingSection/PricingSection';
 import CTASection from '../../components/landing/CTASection/CTASection';
@@ -20,9 +20,9 @@ const LandingPage = () => {
         <HeroSection />
         <StatsSection />
         <AboutSection />
-        <TestimonialSection />
+        <AboutQuoteSection />
         <ServicesSection />
-        <WhyChooseUsSection />
+        <AboutChooseUsSection />
         <FeedbackSection />
         <PricingSection />
         <CTASection />

@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
+  overflow: hidden;
 }
 
 .header {
@@ -22,7 +23,7 @@
 }
 
 .tag {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 400;
   color: #050201;
@@ -30,9 +31,9 @@
 }
 
 .title {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 48px;
-  line-height: 1.1;
+  font-family: var(--font-serif);
+  font-size: 54px;
+  line-height: 1.15;
   color: #050201;
   margin: 0;
   font-weight: 400;
@@ -75,7 +76,8 @@
 .content {
   display: flex;
   align-items: center;
-  gap: 80px;
+  justify-content: space-between;
+  gap: 40px;
   width: 100%;
 }
 
@@ -115,11 +117,11 @@
 }
 
 .carouselContainer {
-  flex: 1;
-  overflow: hidden;
+  width: 440px;
+  flex-shrink: 0;
   position: relative;
-  /* Allow overflow visible on right side if possible, or just pad right */
-  padding-right: 40px; 
+  overflow: visible;
+  clip-path: inset(-100px -100vw -100px -20px);
 }
 
 .carouselTrack {
@@ -133,15 +135,16 @@
   width: 440px;
   background-color: #FFFFFF;
   border-radius: 16px;
-  padding: 40px;
+  padding: 32px 40px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.03);
   flex-shrink: 0;
 }
 
 .quote {
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   line-height: 1.8;
   color: #A08C7F;
@@ -178,6 +181,7 @@
 }
 
 .authorInfo h4 {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: var(--color-text-main);
@@ -185,6 +189,7 @@
 }
 
 .authorInfo p {
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: #BBAAA0;
   margin: 0;
@@ -232,11 +237,64 @@
   
   .content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .graphicContainer {
+    width: 300px;
+    height: 300px;
   }
   
   .testimonialCard {
-    min-width: 300px;
-    width: 300px;
+    min-width: 340px;
+    width: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbackSection {
+    padding: 48px 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .headerLeft {
+    align-items: center;
+    text-align: center;
+  }
+
+  .carouselContainer {
+    width: 100%;
+    max-width: 340px;
+    clip-path: none;
+  }
+
+  .testimonialCard {
+    min-width: 100%;
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .quote {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+  .graphicContainer {
+    width: 260px;
+    height: 260px;
   }
 }

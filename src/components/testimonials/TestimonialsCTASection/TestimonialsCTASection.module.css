@@ -1,0 +1,86 @@
+.ctaSection {
+  width: 100%;
+  padding: 80px 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.ctaBanner {
+  width: 100%;
+  max-width: 1192px;
+  height: 360px;
+  border-radius: 30px;
+  background-color: #0000000F;
+  background-image: url('../../../assets/images/cta_bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  color: #FEFEFE;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  max-width: 669px;
+  line-height: 1.4;
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.4;
+  color: #FEFEFE;
+  margin: 0;
+  opacity: 0.9;
+  text-align: center;
+  max-width: 640px;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 8px 8px 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.buttonText {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  color: #050201;
+}
+
+.buttonIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #929971;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
