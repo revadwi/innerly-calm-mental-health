@@ -6,12 +6,11 @@ import styles from './PrivacyHeroSection.module.css';
 const PrivacyHeroSection = () => {
   return (
     <div className={styles.container}>
-      {/* 1. Global Wrapper for all sections (Navbar, Hero, Content) */}
-      <div className={styles.wrapper}>
-        
-        {/* Component Details: Navbar */}
-        <Navbar />
+      {/* Component Details: Navbar */}
+      <Navbar />
 
+      {/* 1. Global Wrapper for Hero and Content */}
+      <div className={styles.wrapper}>
         {/* Component Details: Hero Section (Privacy Policy Header Card) */}
         <section className={styles.heroSection}>
           {/* Top Badge */}
